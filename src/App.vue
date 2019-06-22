@@ -110,7 +110,7 @@
                             <div class="control">
                           <textarea class="textarea" name="task organization" type="text"
                                     placeholder="Describe the organization of forces available to the issuing headquarters and their command and support relationships. Refer to Annex A (Task Organization) if long or complicated."
-                                    v-model="formData.taskOrg" data-vv-scope="step1">
+                                    v-model="formData.taskOrg" data-vv-scope="step1" ></textarea>
                             </div>
                         </div>
                     </div>
@@ -143,7 +143,7 @@
                         <div class="field">
                             <label class="label">Terrain</label>
                             <div class="control">
-                                <textarea class="textarea" name="terrain" v-model="formData.situation3"
+                                <textarea class="input" name="terrain" v-model="formData.situation3"
                                           placeholder="Describe the aspects of terrain that impact operations. Refer to Annex B (Intelligence) as required."
                                           v-validate="'required'" data-vv-scope="step2"></textarea>
                                 <p class="help is-danger" v-show="errors.has('step2.terrain')">
@@ -152,24 +152,24 @@
                             </div>
                         </div>
                         <div class="field">
-                            <label class="label">Area of Interest</label>
+                            <label class="label">Weather</label>
                             <div class="control">
-                                <textarea class="textarea" name="area of interest" v-model="formData.situation4"
-                                          placeholder="Describe the area of interest. Refer to Annex B (Intelligence) as required."
+                                <textarea class="input" name="weather" v-model="formData.situation4"
+                                          placeholder="Describe the aspects of weather that impact operations. Refer to Annex B (Intelligence) as required."
                                           v-validate="'required'" data-vv-scope="step2"></textarea>
-                                <p class="help is-danger" v-show="errors.has('step2.area of interest')">
-                                    {{ errors.first('step2.area of interest') }}
+                                <p class="help is-danger" v-show="errors.has('step2.weather')">
+                                    {{ errors.first('step2.weather') }}
                                 </p>
                             </div>
                         </div>
                         <div class="field">
-                            <label class="label">Area of Interest</label>
+                            <label class="label">Enemy Forces</label>
                             <div class="control">
-                                <textarea class="textarea" name="area of interest" v-model="formData.situation5"
-                                          placeholder="Describe the area of interest. Refer to Annex B (Intelligence) as required."
+                                <textarea class="textarea" name="enemy forces" v-model="formData.situation5"
+                                          placeholder="Describe the enemy forces. Refer to Annex B (Intelligence) as required."
                                           v-validate="'required'" data-vv-scope="step2"></textarea>
-                                <p class="help is-danger" v-show="errors.has('step2.area of interest')">
-                                    {{ errors.first('step2.area of interest') }}
+                                <p class="help is-danger" v-show="errors.has('step2.enemy forces')">
+                                    {{ errors.first('step2.enemy forces') }}
                                 </p>
                             </div>
                         </div>
