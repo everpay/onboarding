@@ -58,6 +58,7 @@ export default {
             situation3: '',
             situation4: '',
             situation5: '',
+            enemy1: '',
             friendly1: '',
             friendly2: '',
             friendly3: '',

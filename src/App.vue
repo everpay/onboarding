@@ -165,214 +165,178 @@
                         <div class="field">
                             <label class="label">Enemy Forces</label>
                             <div class="control">
-                                <textarea class="textarea" name="enemy forces" v-model="formData.situation5"
-                                          placeholder="Describe the enemy forces. Refer to Annex B (Intelligence) as required."
+                                <textarea class="textarea" name="enemy forces" v-model="formData.enemy1"
+                                          placeholder="Identify enemy forces and appraise their general capabilities. Describe the enemy’s composition, disposition, location, strength, and probable courses of action. Identify adversaries and known or potential terrorist threats within the area of operations. Refer to Annex B (Intelligence) as required."
                                           v-validate="'required'" data-vv-scope="step2"></textarea>
                                 <p class="help is-danger" v-show="errors.has('step2.enemy forces')">
                                     {{ errors.first('step2.enemy forces') }}
                                 </p>
                             </div>
                         </div>
-
+                        <div class="field">
+                            <label class="label">Higher Headquarters Two Levels Up</label>
+                            <div class="control">
+                                <textarea class="input" name="hhq2" v-model="formData.friendly1"
+                                          placeholder="Identify the higher headquarters two echelons above (for example, Joint Task Force-18)."
+                                          v-validate="'required'" data-vv-scope="step2"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step2.hhq2')">
+                                    {{ errors.first('step2.hhq2') }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Mission</label>
+                            <div class="control">
+                                <textarea class="input" name="hhq2 mission" v-model="formData.friendly2"
+                                          placeholder="Input Higher Headquarters Two Levels Up Mission"
+                                          v-validate="'required'" data-vv-scope="step2"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step2.hhq2 mission')">
+                                    {{ errors.first('step2.hhq2 mission') }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Commanders Intent</label>
+                            <div class="control">
+                                <textarea class="input" name="hhq2 intent" v-model="formData.friendly3"
+                                          placeholder="Input Higher Headquarters Two Levels Up Commanders Intent"
+                                          v-validate="'required'" data-vv-scope="step2"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step2.hhq2 intent')">
+                                    {{ errors.first('step2.hhq2 intent') }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Higher Headquarters</label>
+                            <div class="control">
+                                <textarea class="input" name="hhq" v-model="formData.friendly4"
+                                          placeholder="Identify the higher headquarters one echelon above (for example, 1st [U.S.] Armored Division)"
+                                          v-validate="'required'" data-vv-scope="step2"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step2.hhq')">
+                                    {{ errors.first('step2.hhq') }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Mission</label>
+                            <div class="control">
+                                <textarea class="input" name="hhq mission" v-model="formData.friendly5"
+                                          placeholder="Input Higher Headquarters Mission."
+                                          v-validate="'required'" data-vv-scope="step2"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step2.hhq mission')">
+                                    {{ errors.first('step2.hhq mission') }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Commanders Intent</label>
+                            <div class="control">
+                                <textarea class="input" name="hhq intent" v-model="formData.friendly6"
+                                          placeholder="Input Higher Headquarters Commanders Intent"
+                                          v-validate="'required'" data-vv-scope="step2"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step2.hhq intent')">
+                                    {{ errors.first('step2.hhq intent') }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Missions of Adjacent Units</label>
+                            <div class="control">
+                                <textarea class="textarea" name="adjacent units" v-model="formData.friendly7"
+                                          placeholder="Identify and state the missions of adjacent units and other units whose actions have a significant impact on the issuing headquarters."
+                                          v-validate="'required'" data-vv-scope="step2"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step2.adjacent units')">
+                                    {{ errors.first('step2.adjacent units') }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Interagency, Intergovernmental, and Nongovernmental Organizations</label>
+                            <div class="control">
+                                <textarea class="textarea" name="interagency" v-model="formData.friendly8"
+                                          placeholder="dentify and state the objective or goals and primary tasks of those non-Department of Defense organizations that have a significant role within the area of operations. Refer to Annex V (Interagency Coordination) as required."
+                                          v-validate="'required'" data-vv-scope="step2"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step2.interagency')">
+                                    {{ errors.first('step2.interagency') }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Civil Considerations</label>
+                            <div class="control">
+                                <textarea class="textarea" name="civil considerations" v-model="formData.friendly9"
+                                          placeholder="Describe the critical aspects of the civil situation that impact operations. Refer to Appendix 1 (Intelligence Estimate) to Annex B (Intelligence) as required."
+                                          v-validate="'required'" data-vv-scope="step2"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step2.civil considerations')">
+                                    {{ errors.first('step2.civil considerations') }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Attachments and Detachments</label>
+                            <div class="control">
+                                <textarea class="textarea" name="attachments and detachments" v-model="formData.friendly10"
+                                          placeholder="List units attached to or detached from the issuing headquarters. State when each attachment or detachment is effective (for example, on order, on commitment of the reserve) if different from the effective time of the OPLAN or OPORD. Do not repeat information already listed in Annex A (Task Organization)."
+                                          v-validate="'required'" data-vv-scope="step2"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step2.attachments and detachments')">
+                                    {{ errors.first('step2.attachments and detachments') }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Assumptions</label>
+                            <div class="control">
+                                <textarea class="textarea" name="assumptions" v-model="formData.friendly11"
+                                          placeholder="List assumptions used in the development of the OPLAN or OPORD."
+                                          v-validate="'required'" data-vv-scope="step2"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step2.assumptions')">
+                                    {{ errors.first('step2.assumptions') }}
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </tab>
                 
-                <tab name="Step 3" info="Mission" num="3">
+                <tab name="Step 3" info="Mission" data-vv-scope="step3" num="3">
                     <div id="form-step-3">
                         <div class="field">
-                            <label class="label">step 3?</label>
+                            <label class="label">Mission</label>
                             <div class="control">
-                                <div class="select" name="reference">
-                                    <select v-model="formData.reference" v-validate="'required'" name="reference"
-                                            data-vv-scope="step3">
-                                        <option value="">Select</option>
-                                        <option value="newspaper">Newspaper</option>
-                                        <option value="social-media">Social Media</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
+                                <textarea class="textarea" name="mission paragraph" v-model="formData.mission1"
+                                          placeholder="State the unit’s mission— a short description of the who, what (task), when, where, and why (purpose) that clearly indicates the action to be taken and the reason for doing so."
+                                          v-validate="'required'" data-vv-scope="step3"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step3.mission paragraph')">
+                                    {{ errors.first('step3.mission paragraph') }}
+                                </p>
                             </div>
-                            <p class="help is-danger" v-show="errors.has('step3.reference')">
-                                {{ errors.first('step3.reference') }}
-                            </p>
-                        </div>
-                        <div class="field">
-                            <div class="control">
-                                <label class="checkbox">
-                                    <input type="checkbox" name="terms" v-model="formData.terms" data-vv-scope="step3"
-                                           v-validate="'required'">
-                                    I agree to the <a href="#">terms and conditions</a>
-                                </label>
-                            </div>
-                            <p class="help is-danger" v-show="errors.has('step3.terms')">
-                                {{ errors.first('step3.terms') }}
-                            </p>
                         </div>
                     </div>
                 </tab>
-                <tab name="Step 4" info="Execution" num="4">
+
+                <tab name="Step 4" info="Execution" data-vv-scope="step4" num="4">
                     <div id="form-step-4">
-                        <div class="field">
-                            <label class="label">Where did you hear about us?</label>
-                            <div class="control">
-                                <div class="select" name="reference">
-                                    <select v-model="formData.reference" v-validate="'required'" name="reference"
-                                            data-vv-scope="step3">
-                                        <option value="">Select</option>
-                                        <option value="newspaper">Newspaper</option>
-                                        <option value="social-media">Social Media</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <p class="help is-danger" v-show="errors.has('step3.reference')">
-                                {{ errors.first('step3.reference') }}
-                            </p>
-                        </div>
-                        <div class="field">
-                            <div class="control">
-                                <label class="checkbox">
-                                    <input type="checkbox" name="terms" v-model="formData.terms" data-vv-scope="step3"
-                                           v-validate="'required'">
-                                    I agree to the <a href="#">terms and conditions</a>
-                                </label>
-                            </div>
-                            <p class="help is-danger" v-show="errors.has('step3.terms')">
-                                {{ errors.first('step3.terms') }}
-                            </p>
-                        </div>
+                        // TAB 4 THINGS
                     </div>
                 </tab>
-                <tab name="Step 5" info="Sustainment" num="5">
+
+                <tab name="Step 5" info="Sustainment" data-vv-scope="step5" num="5">
                     <div id="form-step-5">
-                        <div class="field">
-                            <label class="label">Where did you hear about us?</label>
-                            <div class="control">
-                                <div class="select" name="reference">
-                                    <select v-model="formData.reference" v-validate="'required'" name="reference"
-                                            data-vv-scope="step3">
-                                        <option value="">Select</option>
-                                        <option value="newspaper">Newspaper</option>
-                                        <option value="social-media">Social Media</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <p class="help is-danger" v-show="errors.has('step3.reference')">
-                                {{ errors.first('step3.reference') }}
-                            </p>
-                        </div>
-                        <div class="field">
-                            <div class="control">
-                                <label class="checkbox">
-                                    <input type="checkbox" name="terms" v-model="formData.terms" data-vv-scope="step3"
-                                           v-validate="'required'">
-                                    I agree to the <a href="#">terms and conditions</a>
-                                </label>
-                            </div>
-                            <p class="help is-danger" v-show="errors.has('step3.terms')">
-                                {{ errors.first('step3.terms') }}
-                            </p>
-                        </div>
+                        // TAB 5 THINGS
                     </div>
                 </tab>
-                <tab name="Step 6" info="Command & Signal" num="6">
+                <tab name="Step 6" info="Command & Signal" data-vv-scope="step6" num="6">
                     <div id="form-step-6">
-                        <div class="field">
-                            <label class="label">Where did you hear about us?</label>
-                            <div class="control">
-                                <div class="select" name="reference">
-                                    <select v-model="formData.reference" v-validate="'required'" name="reference"
-                                            data-vv-scope="step3">
-                                        <option value="">Select</option>
-                                        <option value="newspaper">Newspaper</option>
-                                        <option value="social-media">Social Media</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <p class="help is-danger" v-show="errors.has('step3.reference')">
-                                {{ errors.first('step3.reference') }}
-                            </p>
-                        </div>
-                        <div class="field">
-                            <div class="control">
-                                <label class="checkbox">
-                                    <input type="checkbox" name="terms" v-model="formData.terms" data-vv-scope="step3"
-                                           v-validate="'required'">
-                                    I agree to the <a href="#">terms and conditions</a>
-                                </label>
-                            </div>
-                            <p class="help is-danger" v-show="errors.has('step3.terms')">
-                                {{ errors.first('step3.terms') }}
-                            </p>
-                        </div>
+                        // TAB 6 THINGS
                     </div>
                 </tab>
-                <tab name="Step 7" info="Confirmation" num="7">
+                <tab name="Step 7" info="Attachments" data-vv-scope="step7" num="7">
                     <div id="form-step-7">
-                        <div class="field">
-                            <label class="label">Where did you hear about us?</label>
-                            <div class="control">
-                                <div class="select" name="reference">
-                                    <select v-model="formData.reference" v-validate="'required'" name="reference"
-                                            data-vv-scope="step3">
-                                        <option value="">Select</option>
-                                        <option value="newspaper">Newspaper</option>
-                                        <option value="social-media">Social Media</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <p class="help is-danger" v-show="errors.has('step3.reference')">
-                                {{ errors.first('step3.reference') }}
-                            </p>
-                        </div>
-                        <div class="field">
-                            <div class="control">
-                                <label class="checkbox">
-                                    <input type="checkbox" name="terms" v-model="formData.terms" data-vv-scope="step3"
-                                           v-validate="'required'">
-                                    I agree to the <a href="#">terms and conditions</a>
-                                </label>
-                            </div>
-                            <p class="help is-danger" v-show="errors.has('step3.terms')">
-                                {{ errors.first('step3.terms') }}
-                            </p>
-                        </div>
+                        // TAB 7 THINGS
                     </div>
                 </tab>
-                <tab name="Step 8" info="Confirmation" num="8">
+                <tab name="Step 8" info="Confirmation" data-vv-scope="step8" num="8">
                     <div id="form-step-8">
-                        <div class="field">
-                            <label class="label">Where did you hear about us?</label>
-                            <div class="control">
-                                <div class="select" name="reference">
-                                    <select v-model="formData.reference" v-validate="'required'" name="reference"
-                                            data-vv-scope="step3">
-                                        <option value="">Select</option>
-                                        <option value="newspaper">Newspaper</option>
-                                        <option value="social-media">Social Media</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <p class="help is-danger" v-show="errors.has('step3.reference')">
-                                {{ errors.first('step3.reference') }}
-                            </p>
-                        </div>
-                        <div class="field">
-                            <div class="control">
-                                <label class="checkbox">
-                                    <input type="checkbox" name="terms" v-model="formData.terms" data-vv-scope="step3"
-                                           v-validate="'required'">
-                                    I agree to the <a href="#">terms and conditions</a>
-                                </label>
-                            </div>
-                            <p class="help is-danger" v-show="errors.has('step3.terms')">
-                                {{ errors.first('step3.terms') }}
-                            </p>
-                        </div>
+                        // TAB 8 THINGS    
                     </div>
                 </tab>
             </template>
