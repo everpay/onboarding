@@ -315,19 +315,215 @@
 
                 <tab name="Step 4" info="Execution" data-vv-scope="step4" num="4">
                     <div id="form-step-4">
-                        // TAB 4 THINGS
+                        <div class="field">
+                            <label class="label">Commanders Intent</label>
+                            <div class="control">
+                                <textarea class="input" name="commanders intent" v-model="formData.execution1"
+                                          placeholder="Input Commanders Intent. Consider purpose, key tasks and end state."
+                                          v-validate="'required'" data-vv-scope="step4"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step4.commanders intent')">
+                                    {{ errors.first('step4.commanders intent') }}
+                                </p>
+                            </div>
+                        </div>
                     </div>
+                    <div class="field">
+                            <label class="label">Concept of Operations</label>
+                            <div class="control">
+                                <textarea class="textarea" name="concept of operations" v-model="formData.execution2"
+                                          placeholder="The concept of operations is a statement that directs the manner in which subordinate units cooperate to accomplish the mission and establishes the sequence of actions the force will use to achieve the end state."
+                                          v-validate="'required'" data-vv-scope="step4"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step4.concept of operations')">
+                                    {{ errors.first('step4.concept of operations') }}
+                                </p>
+                            </div>
+                    </div>
+                    <div class="field">
+                            <label class="label">Scheme of Movement and Maneuver</label>
+                            <div class="control">
+                                <textarea class="textarea" name="scheme of maneuver" v-model="formData.execution3"
+                                          placeholder="The scheme of maneuver is a statement that directs the manner in which subordinate units cooperate to accomplish the mission and establishes the sequence of actions the force will use to achieve the end state."
+                                          v-validate="'required'" data-vv-scope="step4"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step4.scheme of maneuver')">
+                                    {{ errors.first('step4.scheme of maneuver') }}
+                                </p>
+                            </div>
+                    </div>
+                    <div class="field">
+                            <label class="label">Phase One</label>
+                            <div class="control">
+                                <textarea class="textarea" name="phase one" v-model="formData.execution4"
+                                          placeholder="Enter phase details. Consider starting state, key tasks and end state."
+                                          v-validate="'required'" data-vv-scope="step4"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step4.phase one')">
+                                    {{ errors.first('step4.phase one') }}
+                                </p>
+                            </div>
+                    </div>
+                    <div class="field">
+                            <label class="label">Phase Two</label>
+                            <div class="control">
+                                <textarea class="textarea" name="phase two" v-model="formData.execution5"
+                                          placeholder="Enter phase details. Consider starting state, key tasks and end state."
+                                          v-validate="'required'" data-vv-scope="step4"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step4.phase two')">
+                                    {{ errors.first('step4.phase two') }}
+                                </p>
+                            </div>
+                    </div>
+                    <div class="field">
+                            <label class="label">Phase Three</label>
+                            <div class="control">
+                                <textarea class="textarea" name="phase three" v-model="formData.execution6"
+                                          placeholder="Enter phase details. Consider starting state, key tasks and end state."
+                                          v-validate="'required'" data-vv-scope="step4"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step4.phase three')">
+                                    {{ errors.first('step4.phase three') }}
+                                </p>
+                            </div>
+                    </div>
+                    <div class="field">
+                            <label class="label">Stability Tasks</label>
+                            <div class="control">
+                                <textarea class="textarea" name="stability tasks" v-model="formData.execution7"
+                                          placeholder="Describe how stability tasks support the concept of operations."
+                                          v-validate="'required'" data-vv-scope="step4"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step4.stability tasks')">
+                                    {{ errors.first('step4.stability tasks') }}
+                                </p>
+                            </div>
+                    </div>
+                    <div class="field">
+                            <label class="label">Tasks to Suboordinate Units</label>
+                            <div class="control">
+                                <textarea class="textarea" name="suboordinate unit tasks" v-model="formData.execution8"
+                                          placeholder="State tasks assigned to each unit that reports directly to the headquarters issuing the order."
+                                          v-validate="'required'" data-vv-scope="step4"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step4.suboordinate unit tasks')">
+                                    {{ errors.first('step4.suboordinate unit tasks') }}
+                                </p>
+                            </div>
+                    </div>
+                        
                 </tab>
 
                 <tab name="Step 5" info="Sustainment" data-vv-scope="step5" num="5">
                     <div id="form-step-5">
-                        // TAB 5 THINGS
+                        <div class="field">
+                            <label class="label">Sustainment</label>
+                            <div class="control">
+                                <textarea class="textarea" name="sustainment information" v-model="formData.sustainment1"
+                                          placeholder="Describe the concept of sustainment, including priorities of sustainment by unit or area."
+                                          v-validate="'required'" data-vv-scope="step5"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step5.sustainment information')">
+                                    {{ errors.first('step5.sustainment information') }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Logistics</label>
+                        <div class="control">
+                            <textarea class="input" name="logistics" v-model="formData.sustainment2"
+                                placeholder="Refer to Annex F (Sustainment) as required."
+                                v-validate="'required'" data-vv-scope="step5"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step5.logistics')">
+                                    {{ errors.first('step5.logistics') }}
+                                </p>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Personnel</label>
+                        <div class="control">
+                            <textarea class="input" name="personnel" v-model="formData.sustainment3"
+                                placeholder="Refer to Annex F (Sustainment) as required."
+                                v-validate="'required'" data-vv-scope="step5"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step5.personnel')">
+                                    {{ errors.first('step5.personnel') }}
+                                </p>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Health Service Support</label>
+                        <div class="control">
+                            <textarea class="input" name="health service support" v-model="formData.sustainment4"
+                                placeholder="Refer to Annex F (Sustainment) as required."
+                                v-validate="'required'" data-vv-scope="step5"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step5.health service support')">
+                                    {{ errors.first('step5.health service support') }}
+                                </p>
+                        </div>
                     </div>
                 </tab>
                 <tab name="Step 6" info="Command & Signal" data-vv-scope="step6" num="6">
                     <div id="form-step-6">
-                        // TAB 6 THINGS
-                    </div>
+                        <div class="field">
+                            <label class="label">Location of Commander and Key Leaders</label>
+                            <div class="control">
+                            <textarea class="textarea" name="commander location" v-model="formData.commandAndSignal1"
+                                placeholder="State where the commander and key leaders intend to be during the operation, by phase if the operation is phased.."
+                                v-validate="'required'" data-vv-scope="step6"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step6.commander location')">
+                                    {{ errors.first('step6.commander location') }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Succession of Command</label>
+                            <div class="control">
+                            <textarea class="textarea" name="command succession" v-model="formData.commandAndSignal2"
+                                placeholder="State where the commander and key leaders intend to be during the operation, by phase if the operation is phased.."
+                                v-validate="'required'" data-vv-scope="step6"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step6.command succession')">
+                                    {{ errors.first('step6.command succession') }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Liason Requirments</label>
+                            <div class="control">
+                            <textarea class="textarea" name="liason requirements" v-model="formData.commandAndSignal3"
+                                placeholder="State where the commander and key leaders intend to be during the operation, by phase if the operation is phased.."
+                                v-validate="'required'" data-vv-scope="step6"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step6.liason requirements')">
+                                    {{ errors.first('step6.liason requirements') }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Command Posts</label>
+                            <div class="control">
+                            <textarea class="textarea" name="command posts" v-model="formData.commandAndSignal4"
+                                placeholder="State where the commander and key leaders intend to be during the operation, by phase if the operation is phased.."
+                                v-validate="'required'" data-vv-scope="step6"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step6.command posts')">
+                                    {{ errors.first('step6.command posts') }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Reports</label>
+                            <div class="control">
+                            <textarea class="textarea" name="reports" v-model="formData.commandAndSignal5"
+                                placeholder="State where the commander and key leaders intend to be during the operation, by phase if the operation is phased.."
+                                v-validate="'required'" data-vv-scope="step6"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step6.reports')">
+                                    {{ errors.first('step6.reports') }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Signal</label>
+                            <div class="control">
+                            <textarea class="textarea" name="signal" v-model="formData.commandAndSignal6"
+                                placeholder="State where the commander and key leaders intend to be during the operation, by phase if the operation is phased.."
+                                v-validate="'required'" data-vv-scope="step6"></textarea>
+                                <p class="help is-danger" v-show="errors.has('step6.signal')">
+                                    {{ errors.first('step6.signal') }}
+                                </p>
+                            </div>
+                        </div>
+                </div>
                 </tab>
                 <tab name="Step 7" info="Attachments" data-vv-scope="step7" num="7">
                     <div id="form-step-7">
