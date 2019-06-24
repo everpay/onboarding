@@ -103,7 +103,6 @@ export default {
 
     mounted(){
         this.totalTabs = this.tabs.length;
-        console.log("number of tabs: "+this.totalTabs)
     },
 
     methods:{
