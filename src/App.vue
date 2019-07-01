@@ -528,6 +528,62 @@
                 <tab name="Step 7" info="Attachments" data-vv-scope="step7" num="7">
                     <div id="form-step-7">
                         // TAB 7 THINGS
+
+                        <div class="field">
+                            <div class="file has-name">
+                                <label class="file-label">
+                                <input class="file-input" type="file" name="resume">
+                                <span class="file-cta">
+                                    <span class="file-icon">
+                                    <i class="fas fa-upload"></i>
+                                    </span>
+                                    <span class="file-label">
+                                    File Upload
+                                    </span>
+                                </span>
+                                <span class="file-name">
+                                    Attachment
+                                </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="file has-name">
+                                <label class="file-label">
+                                <input class="file-input" type="file" name="resume">
+                                <span class="file-cta">
+                                    <span class="file-icon">
+                                    <i class="fas fa-upload"></i>
+                                    </span>
+                                    <span class="file-label">
+                                    File Upload
+                                    </span>
+                                </span>
+                                <span class="file-name">
+                                    Attachment
+                                </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="file has-name">
+                                <label class="file-label">
+                                <input class="file-input" type="file" name="resume">
+                                <span class="file-cta">
+                                    <span class="file-icon">
+                                    <i class="fas fa-upload"></i>
+                                    </span>
+                                    <span class="file-label">
+                                    File Upload
+                                    </span>
+                                </span>
+                                <span class="file-name">
+                                    Attachment
+                                </span>
+                                </label>
+                            </div>
+                        </div>
+
                     </div>
                 </tab>
                 <tab name="Step 8" info="Confirmation" data-vv-scope="step8" num="8">
